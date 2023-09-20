@@ -1,8 +1,10 @@
-import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 
 function PieGraph({ data, colors, label, categoryToggle, columnsSpan }) {
   return (
-    <section className={`flex flex-col w-full rounded-2xl shadow-xl py-2  ${columnsSpan} bg-white`}>
+    <section
+      className={`flex flex-col w-full rounded-2xl shadow-xl py-2  ${columnsSpan} bg-white`}
+    >
       <div className="flex justify-around mb-2 pt-4">
         <h2 className="capitalize">{label}</h2>
         {categoryToggle}
@@ -24,7 +26,10 @@ function PieGraph({ data, colors, label, categoryToggle, columnsSpan }) {
             dataKey="value"
           >
             {data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+              <Cell
+                key={`cell-${index}`}
+                fill={colors[index % colors.length]}
+              />
             ))}
           </Pie>
           <Tooltip />

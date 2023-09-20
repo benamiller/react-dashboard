@@ -1,6 +1,13 @@
-import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer, YAxis } from 'recharts';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  Tooltip,
+  ResponsiveContainer,
+  YAxis,
+} from "recharts";
 
-function BarGraph ({ data, totalValue, label, categoryToggle, columnsSpan }) {
+function BarGraph({ data, totalValue, label, categoryToggle, columnsSpan }) {
   return (
     <section
       className={`flex flex-col w-full h-full rounded-2xl shadow-xl py-2  ${columnsSpan} bg-white`}
@@ -46,11 +53,23 @@ function BarGraph ({ data, totalValue, label, categoryToggle, columnsSpan }) {
           <XAxis dataKey="time" interval={0} />
           <YAxis />
           <Tooltip />
-          <Bar name="LY" dataKey="ly" fill="#86198F" radius={[20, 20, 0, 0]} barSize={15} />
-          <Bar name="YTD" dataKey="ytd" fill="#02155E" radius={[20, 20, 0, 0]} barSize={15} />
+          <Bar
+            name="LY"
+            dataKey="ly"
+            fill="#86198F"
+            radius={[20, 20, 0, 0]}
+            barSize={15}
+          />
+          <Bar
+            name="YTD"
+            dataKey="ytd"
+            fill="#02155E"
+            radius={[20, 20, 0, 0]}
+            barSize={15}
+          />
         </BarChart>
       </ResponsiveContainer>
       {/*  END OF HEADING */}
     </section>
-  ); 
+  );
 }

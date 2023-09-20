@@ -1,5 +1,5 @@
-import DropDown from './DropDown';
-import { formatPhoneNumber } from '../../utils/functions/formattingFunctions';
+import DropDown from "./DropDown";
+import { formatPhoneNumber } from "../../utils/functions/formattingFunctions";
 
 function Table({
   tableHeaders,
