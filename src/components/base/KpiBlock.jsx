@@ -1,5 +1,4 @@
 function KpiBlock({ svgComponent, title, time, value, targetValue = 0 }) {
-
   let numberValue;
 
   if (typeof value === "string") {
