@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-main text-gray-800 bg-gray-100;
+  }
+  h1 {
+    @apply text-4xl font-bold;
+  }
+
+  h2 {
+    @apply text-3xl font-medium;
+  }
+
+  h3 {
+    @apply text-2xl;
+  }
+}
+@layer components {
+  .nav-link {
+    @apply transition duration-500 ease-in-out hover:text-gray-600 transform hover:-translate-y-1 hover:scale-110;
+  }
+}
