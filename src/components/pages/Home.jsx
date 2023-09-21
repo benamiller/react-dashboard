@@ -82,6 +82,15 @@ function Home() {
         categoryToggle={null}
         columnsSpan="col-span-1"
       />
+
+      <Table
+        tableHeaders={["Name", "Email", "Employee Number", "Role", "Phone Number", "Zone"]}
+        tableData={employees}
+        gridLayout="col-span-2 place-self-center"
+        dropDownOptions={["Leader", "Cashier", "Stock", "Greeter", "Middle"]}
+        dropDownState={null}
+        setDropDownState={null}
+      />
     </main>
   );
 }
