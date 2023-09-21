@@ -4,6 +4,7 @@ import Header from './layout/Header';
 import { UserProvider } from '../client/context/UserContext';
 import { Routes, Route } from 'react-router';
 import Home from './pages/Home'; 
+import ErrorBoundary from './base/ErrorBoundary';
 
 function App() {
   return (
@@ -12,7 +13,10 @@ function App() {
         <Layout>
           <Header />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={
+              <ErrorBoundary>
+                <Home />
+              </ErrorBoundary> } />
             {/* <Route path="/reviews" element={} /> */}
             {/* <Route path="/sales" element={} /> */}
           </Routes>
