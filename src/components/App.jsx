@@ -3,6 +3,7 @@ import Layout from "./layout/Layout";
 import Header from './layout/Header';
 import { UserProvider } from '../client/context/UserContext';
 import { Routes, Route } from 'react-router';
+import Home from './pages/Home'; 
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <Layout>
           <Header />
           <Routes>
-            <Route path="/" />
+            <Route path="/" element={<Home />} />
             {/* <Route path="/reviews" element={} /> */}
             {/* <Route path="/sales" element={} /> */}
           </Routes>
