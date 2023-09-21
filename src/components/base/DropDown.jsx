@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { ListBox, Transition } from "@headlessui/react";
+import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
 
 function DropDown({ list, parentStateSelect, setParentStateSelect }) {
