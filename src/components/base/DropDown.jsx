@@ -6,7 +6,7 @@ function DropDown({ list, parentStateSelect, setParentStateSelect }) {
   const [selfStateSelected, setSelfStateSelected] = useState(list[0]);
 
   const selected =
-    parentStateSelected == null ? selfStateSelected : parentStateSelect;
+    parentStateSelect == null ? selfStateSelected : parentStateSelect;
   const setSelected =
     setParentStateSelect == null ? setSelfStateSelected : setParentStateSelect;
 
