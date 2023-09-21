@@ -1,7 +1,7 @@
 import "./App.css";
 import Layout from "./layout/Layout";
 import Header from './layout/Header';
-import { UserProvider } from '../../context/UserContext';
+import { UserProvider } from '../client/context/UserContext';
 
 function App() {
   return (

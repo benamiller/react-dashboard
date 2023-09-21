@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { UserContext } from '../../context/UserContext';
+import { UserContext } from '../../client/context/UserContext';
 import { BellIcon } from '@heroicons/react/solid';
 
 function Header() {
