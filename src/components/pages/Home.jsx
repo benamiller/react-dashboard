@@ -74,6 +74,14 @@ function Home() {
           targetValue={84}
         />
       </KpiGrid>
+    
+      <AreaGraph
+        data={dailyKpis.traffic}
+        totalValue={getYtdValue(dailyKpis.traffic)}
+        label="traffic"
+        categoryToggle={null}
+        columnsSpan="col-span-1"
+      />
     </main>
   );
 }
