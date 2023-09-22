@@ -78,6 +78,20 @@ function Reviews() {
         }
         columnsSpan="col-span-1"
       />
+
+      <Table
+        tableHeaders={[
+          "Name",
+          "Email",
+          "Date",
+          "Overall Satisfaction",
+          "Promoter Score",
+          "Was Helped",
+          "Comments",
+        ]}
+        tableData={reviews}
+        gridLayout="col-span-2 place-self-center"
+      />
     </main>
   );
 }
