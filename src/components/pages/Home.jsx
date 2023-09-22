@@ -31,13 +31,15 @@ function Home() {
 
   async function fetchData(urlPath, setFunc) {
     try {
-      let response = await fetch(`https://dashboard.mthree.academy/daily/${urlPath}`);
+      let response = await fetch(
+        `https://dashboard.mthree.academy/daily/${urlPath}`
+      );
       let resData = await response.json();
       setFunc(resData);
     } catch (e) {
       console.error(e);
     }
-  };
+  }
 
   return (
     <main className="grid pl-14 grid-cols-2 gap-8 w-4/5 m-auto mt-4 mb-8">
@@ -74,7 +76,7 @@ function Home() {
           targetValue={84}
         />
       </KpiGrid>
-    
+
       <AreaGraph
         data={dailyKpis.traffic}
         totalValue={getYtdValue(dailyKpis.traffic)}
@@ -84,7 +86,14 @@ function Home() {
       />
 
       <Table
-        tableHeaders={["Name", "Email", "Employee Number", "Role", "Phone Number", "Zone"]}
+        tableHeaders={[
+          "Name",
+          "Email",
+          "Employee Number",
+          "Role",
+          "Phone Number",
+          "Zone",
+        ]}
         tableData={employees}
         gridLayout="col-span-2 place-self-center"
         dropDownOptions={["Leader", "Cashier", "Stock", "Greeter", "Middle"]}

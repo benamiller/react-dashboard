@@ -1,6 +1,6 @@
-import { useContext } from 'react';
-import { UserContext } from '../../client/context/UserContext';
-import { BellIcon } from '@heroicons/react/solid';
+import { useContext } from "react";
+import { UserContext } from "../../client/context/UserContext";
+import { BellIcon } from "@heroicons/react/solid";
 
 function Header() {
   const { storeNumber } = useContext(UserContext);

@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
-import AreaGraph from '../base/AreaGraph';
-import PieGraph from '../base/PieGraph';
-import Table from '../base/Table';
-import DropDown from '../base/DropDown';
-import { formatPercentage } from '../../utils/functions/formattingFunctions';
+import { useEffect, useState } from "react";
+import AreaGraph from "../base/AreaGraph";
+import PieGraph from "../base/PieGraph";
+import Table from "../base/Table";
+import DropDown from "../base/DropDown";
+import { formatPercentage } from "../../utils/functions/formattingFunctions";
 
 function Reviews() {
   const [category, setCategory] = useState("CSAT");
@@ -29,7 +29,9 @@ function Reviews() {
 
   async function fetchData(urlPath, setFunc) {
     try {
-      let response = await fetch(`https://dashboard.mthree.academy/reviews/${urlPath}`);
+      let response = await fetch(
+        `https://dashboard.mthree.academy/reviews/${urlPath}`
+      );
       let resData = await response.json();
       setFunc(resData);
     } catch (e) {
@@ -46,7 +48,11 @@ function Reviews() {
             ? formatPercentage(reviewStats.totals.csat)
             : formatPercentage(reviewStats.totals.nps)
         }
-        label={category === "CSAT" ? "Customer Satisfaction Score" : "Net Promoter Score"}
+        label={
+          category === "CSAT"
+            ? "Customer Satisfaction Score"
+            : "Net Promoter Score"
+        }
         categoryToggle={
           <DropDown
             list={["CSAT", "NPS"]}
