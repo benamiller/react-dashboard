@@ -5,6 +5,12 @@ import AreaGraph from "../base/AreaGraph";
 import BarGraph from "../base/BarGraph";
 import DropDown from "../base/DropDown";
 import {
+  getYtdValue,
+  ConversionRate,
+  getYearAds,
+  getYearUpt,
+} from "../../utils/functions/KpiFunctions";
+import {
   formatLargeNumbers,
   formatMoneyValue,
 } from "../../utils/functions/formattingFunctions";
