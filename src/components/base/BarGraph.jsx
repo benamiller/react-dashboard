@@ -73,3 +73,5 @@ function BarGraph({ data, totalValue, label, categoryToggle, columnsSpan }) {
     </section>
   );
 }
+
+export default BarGraph;
